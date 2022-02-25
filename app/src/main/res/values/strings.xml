@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Kissparáda</string>
+    <string name="prepare">Připravuji...</string>
+    <string name="vote">Hlasuj</string>
+    <string name="voted_closed">Hlasování je uzavřeno</string>
+    <string name="no_data">Nepodařilo se nic načíst</string>
+    <string name="please_wait">Čekej, prosím...</string>
+    <string name="kissparada">Kissparáda</string>
+    <string name="retroparada">Retroparáda</string>
+    <string name="reminder_vote">Hlasuj do Kissparády</string>
+    <string name="call_for_votes">Hlasuj pro své oblíbené interprety</string>
+    <string name="notice_votes">Upozornění na hlasování</string>
+    <string name="notice_kissparada">Upozornění na premiéru Kissparády</string>
+    <string name="notice_repriza">Upozornění na reprízu Kissparády</string>
+    <string name="cancel">Zruš</string>
+    <string name="save">Ulož</string>
+    <string name="ok">OK</string>
+</resources>
