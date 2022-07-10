@@ -22,13 +22,13 @@ public class Time {
      */
     public Calendar getStartKissparada() {
         //TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-        Calendar startKissparadaInUTC = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        startKissparadaInUTC.set(Calendar.HOUR_OF_DAY, 19);
+        Calendar startKissparadaInUTC = Calendar.getInstance();
+        //startKissparadaInUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
+        startKissparadaInUTC.set(Calendar.HOUR_OF_DAY, 20);
         startKissparadaInUTC.set(Calendar.MINUTE, 45);
         startKissparadaInUTC.set(Calendar.SECOND, 0);
         startKissparadaInUTC.set(Calendar.MILLISECOND,0);
-        startKissparadaInUTC.set(Calendar.MILLISECOND, 0);
-        startKissparadaInUTC.set(Calendar.DAY_OF_WEEK, 4);
+        startKissparadaInUTC.set(Calendar.DAY_OF_WEEK, 4);//středa
         if (Calendar.getInstance().getTimeInMillis() > startKissparadaInUTC.getTimeInMillis())
             startKissparadaInUTC.add(Calendar.DATE, 7);
         Log.w(TAG, "Čas kissparády: " + startKissparadaInUTC.getTime());
@@ -52,13 +52,13 @@ public class Time {
      */
     public Calendar getStartRepriza() {
         //TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-        Calendar startReprizaInUTC = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        startReprizaInUTC.set(Calendar.HOUR_OF_DAY, 17);
+        Calendar startReprizaInUTC = Calendar.getInstance();
+        //startReprizaInUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
+        startReprizaInUTC.set(Calendar.HOUR_OF_DAY, 18);
         startReprizaInUTC.set(Calendar.MINUTE, 45);
         startReprizaInUTC.set(Calendar.SECOND, 0);
         startReprizaInUTC.set(Calendar.MILLISECOND, 0);
-        startReprizaInUTC.set(Calendar.DAY_OF_WEEK, 1);
-        startReprizaInUTC.set(Calendar.MILLISECOND,0);
+        startReprizaInUTC.set(Calendar.DAY_OF_WEEK, 1);//neděle
         if (Calendar.getInstance().getTimeInMillis() > startReprizaInUTC.getTimeInMillis())
             startReprizaInUTC.add(Calendar.DATE, 7);
         Log.w(TAG, "Čas reprízy: " + startReprizaInUTC.getTime());

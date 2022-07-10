@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.content.ContextCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
@@ -13,6 +14,8 @@ import android.app.job.JobScheduler;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +27,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -159,6 +163,10 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         setTextBtnKissparada();
         loadItems();
+
+        Intent serviceIntent = new Intent(this, ReminderService.class);
+        //ContextCompat.startForegroundService(this, serviceIntent);
+
     }
 
 
@@ -192,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                     //.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
                     .setPersisted(true)
                     .setPeriodic(15 * 60 * 1000, 5 * 60 * 1000)
-                    //.setMinimumLatency(5000)
+
                     .build();
 
         } else {
@@ -201,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
                     //.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
                     .setPersisted(true)
                     .setPeriodic(15 * 60 * 1000)
+                    //.setMinimumLatency(5000)
                     .build();
 
         }
@@ -215,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Log.w(TAG, "Job scheduling failed");
             }
+
+
     }
 
 
@@ -247,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
         SwitchCompat swVote, swKissparada, swRepriza;
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.CustomAlertDialog);
         View dialogView = getLayoutInflater().inflate(R.layout.dialog, null);
+        dialogView.setBackground(new ColorDrawable(Color.TRANSPARENT));
         btnCancel = dialogView.findViewById(R.id.btnCancel);
         btnStart = dialogView.findViewById(R.id.btnStart);
         swVote = dialogView.findViewById(R.id.switchNoticeVote);
@@ -311,7 +323,6 @@ public class MainActivity extends AppCompatActivity {
 
     private class SongWrapper {
         private final View view;
-
 
 
         SongWrapper(View view) {

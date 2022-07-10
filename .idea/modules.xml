@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kissparada.iml" filepath="$PROJECT_DIR$/.idea/modules/Kissparada.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kissparada.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kissparada.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kissparada.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kissparada.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kissparada.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kissparada.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kissparada.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kissparada.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

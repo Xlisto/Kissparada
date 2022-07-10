@@ -3,6 +3,9 @@ package cz.xlisto.kissparada;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+
+import androidx.core.content.ContextCompat;
 
 /**
  * Posluchač pro start služby po restartu
@@ -23,7 +26,10 @@ public class Autostart extends BroadcastReceiver {
         {
             //Log.w(TAG,"Nastaven autostart po rebootu");
             reminderAlarm.setAlarm(context, ReminderAlarm.ALARM_VOTE);
-            context.startService(new Intent(context.getApplicationContext(),ReminderService.class));
+            //context.startService(new Intent(context.getApplicationContext(),ReminderService.class));
+
+            ContextCompat.startForegroundService(context.getApplicationContext(), new Intent(context.getApplicationContext(),ReminderService.class));
+
         }
     }
 }

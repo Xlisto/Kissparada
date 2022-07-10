@@ -16,7 +16,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 /**
- * Přída pro správu alarmu a zobrezení notifikace
+ * Přida pro správu alarmu a zobrezení notifikace
  */
 public class ReminderAlarm extends BroadcastReceiver {
     private final String TAG = getClass().getName() + " ";
